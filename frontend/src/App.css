@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  margin: 20px auto;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #282c34;
+}
+
+.Header-buttons button{
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.Histopy-button {
+  background-color: white;
+  border: solid grey 1px;
+  border-radius: 3px;
+  padding: 7px 15px;
+}
+
+.New-List-button {
+  background-color: grey;
+  border-color: transparent;
+  border-radius: 3px;
+  padding: 2px 15px 5px;
+  color: aliceblue;
+}
+
+.New-List-button span{
+  font-size: 20px;
+  bottom: -2px;
+  position: relative;
+}
+

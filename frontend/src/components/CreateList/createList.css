@@ -1,0 +1,23 @@
+.createList {
+  border: 1px solid gray;
+  margin: 1% 1%;
+  align-items: center;
+}
+
+.form-create{
+  margin: 0.5% 1% 1%;
+}
+
+.form-create label{
+  display: block;
+  margin: 1% 1% 1% 0;
+}
+
+.form-create label:nth-child(1){
+  margin: 1% 1% 0 0;
+}
+
+.form-wrap {
+  display: flex;
+  justify-content: space-between;
+}
