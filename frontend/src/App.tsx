@@ -4,21 +4,21 @@ import Board from './components/Board/Board';
 import CreateList from './components/CreateList/CreateList';
 
 interface IList {
-  id: number | string;
   title: string;
 }
 
 function App() {
-  const [list, setList] = useState<Array<IList>>([]);
-  const [show, setShowCreate] = useState(false);
+  const [list, setList] = useState<IList[]>([]);
+  const [show, setShowCreateList] = useState(false);
 
   const showCreate = (hide: boolean) => {
-		setShowCreate(hide);
+		setShowCreateList(hide);
 	};
 
-  // const addList = (newList: Array<IList>) => {
-	// 	setList([...list, newList]);
-	// };
+  const addList = (newList: IList[]) => {
+		setList([...list, ...newList]);
+	};
+  console.log(list);
 
   return (
     <div className="App">
@@ -32,8 +32,7 @@ function App() {
       {show ? (
 				<CreateList
 					showCreate={showCreate}
-					list={list}
-					// newList={newList}
+					addList={addList}
 				/>
 			) : (
 				<Board

@@ -3,12 +3,19 @@
 }
 
 .App-header {
-  margin: 20px auto;
+  margin: 20px auto 10px;
   max-width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #282c34;
+}
+
+@media (max-width: 640px) {
+  .App-header {
+    max-width: 95%;
+    display: block;
+  }
 }
 
 .Header-buttons button{
@@ -20,15 +27,21 @@
   background-color: white;
   border: solid grey 1px;
   border-radius: 3px;
-  padding: 7px 15px;
+  padding: 3px 15px;
+}
+
+.Histopy-button span{
+  font-size: 20px;
+  transform: rotate(-90deg);
+  display: inline-block;
 }
 
 .New-List-button {
   background-color: grey;
   border-color: transparent;
   border-radius: 3px;
-  padding: 2px 15px 5px;
-  color: aliceblue;
+  padding: 2px 15px 4px;
+  color: white;
 }
 
 .New-List-button span{

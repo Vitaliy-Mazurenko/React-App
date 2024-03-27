@@ -1,5 +1,5 @@
 .Board {
-  border: 1px solid gray;
   margin: 1% 1%;
+  display: flex;
   align-items: center;
 }

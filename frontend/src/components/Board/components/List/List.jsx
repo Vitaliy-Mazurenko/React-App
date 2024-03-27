@@ -6,11 +6,9 @@ const List = ({ list }) => {
 
 
 	return (
-		<>
-			<div className='List'>
-
-			</div>
-		</>
+		<div className='List'>
+			{ list.title }
+		</div>
 	);
 };
 
