@@ -25,19 +25,22 @@
 
 .Histopy-button {
   background-color: white;
-  border: solid grey 1px;
+  border: solid #D3D2DA 1px;
   border-radius: 3px;
-  padding: 3px 15px;
+  padding: 1px 15px 6px;
+  font-weight: 500;
 }
 
-.Histopy-button span{
-  font-size: 20px;
-  transform: rotate(-90deg);
-  display: inline-block;
+.Histopy-button img{
+ width: 14px;
+ height: 14px;
+ transform: rotate(-90deg);
+ margin-top: 7px;
+ margin-right: 8px;
 }
 
 .New-List-button {
-  background-color: grey;
+  background-color: #5A647D;
   border-color: transparent;
   border-radius: 3px;
   padding: 2px 15px 4px;

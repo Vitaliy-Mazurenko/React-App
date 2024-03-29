@@ -19,7 +19,7 @@ const CreateList: React.FC<ChildrenProps> = ({ showCreate, addList }) => {
 	const handleCreate = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		if(title){
-			addList([{title,}]);
+			addList([{title}]);
 		}
 
 			showCreate(false);

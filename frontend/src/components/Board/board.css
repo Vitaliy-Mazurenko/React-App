@@ -1,5 +1,9 @@
 .Board {
   margin: 1% 1%;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Board-list {
+margin: 15px 0 15px 15px;
 }

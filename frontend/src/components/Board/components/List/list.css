@@ -1,8 +1,23 @@
 .List {
-  border: 1px solid gray;
-  border-radius: 10px;
+  border-top: 1px solid #BBBBBD;
+  border-bottom: 1px solid #BBBBBD;
   display: flex;
-  padding: 15px;
-  width: 275px;
-  margin: 15px;
+  padding: 10px 0;
+  width: 250px;
+  margin: 15px 0 15px 5px;
+}
+
+.List-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.List-header span{
+  display: inline-block;
+}
+
+.wrap-header img {
+  margin-left: 15px;
+  cursor: pointer;
 }
