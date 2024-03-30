@@ -1,6 +1,6 @@
 import type ITask from './initTask';
 
 export default interface IList {
-  title: string;
+  title: string[];
   tasks?: Array<ITask>;
 }

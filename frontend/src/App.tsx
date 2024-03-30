@@ -9,19 +9,24 @@ import { Context } from './context/context';
 
 
 function App() {
-  const [title, setTitle] = useState('');
+  const [title, setInitTitle] = useState<string[]>([]);
   const [tasks, setTasks] = useState<ITask[]>([]);
-  const [list, setList] = useState<IList[]>([]);
+  const [list, setList] = useState<IList[]>([]);//////
   const [showList, setShowCreateList] = useState(false);
 
   const showCreate = (hide: boolean) => {
 		setShowCreateList(hide);
 	};
 
+  const setTitle = (data: string[]) => {
+    setInitTitle(data);
+  };
+
   const addList = (newList: IList[]) => {
 		setList([...list, ...newList]);
 	};
-  console.log(list);
+  console.log(title);
+  console.log(tasks);
 
   const value = useMemo(
     () => ({

@@ -14,9 +14,10 @@ import { Context } from './../../context/context';
 
 interface ChildrenProps {
 	showCreateTask:  (show: boolean) => void,
+	column: string
 }
  
-const CreateTask: React.FC<ChildrenProps> = ({ showCreateTask }) => {
+const CreateTask: React.FC<ChildrenProps> = ({ showCreateTask, column }) => {
 	const { tasks, setTasks } = useContext(Context);
 	const [description, setDescription] = useState<string>('');
 	const [title, setTitle] = useState<string>('');
@@ -27,8 +28,9 @@ const CreateTask: React.FC<ChildrenProps> = ({ showCreateTask }) => {
 	const handleCreate = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		if(title){
-			setTasks([{
-				title: title,
+			setTasks([...tasks, {
+				title: column,
+				name: title,
 				description: description,
 				date: 'string',
 				status: 'string',

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import List from './components/List/List';
 import type IList from './../../types/initData';
+import { Context } from '../../context/context';
 import './board.css';
 
 // interface IList {
@@ -14,11 +15,14 @@ interface ChildrenProps {
   }
   
   const Board: React.FC<ChildrenProps> = ({ list }) => {
-	const [lists, setLists] = useState<Array<IList>>(list);
+	const { title, tasks } = useContext(Context);
+	// const [lists, setLists] = useState<Array<IList>>(list);
+	console.log(title);
+	console.log(tasks);
   
 	return (
 	  <div className='Board'>
-		{lists.map((item: IList, index) => (
+		{title.map((item: string, index: number) => (
 		  <div className='Board-list' key={index}>
 			<List list={item} />
 		  </div>
