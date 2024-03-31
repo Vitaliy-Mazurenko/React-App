@@ -34,14 +34,15 @@ const Task = ({
 	return (
 		<>
 		<div className='Task'>
-			<div className="List-header">
+			<div className="Task-header">
 				<span>{ task.name }</span>
 			<span className="wrap-header">
 	
 			<img src={threeDots} alt="dots" />
 			</span>
 			</div>
-			<div>text</div>
+			<div className="Task-description">{task.description}</div>
+			<div className="Task-date">{task.date}</div>
 		
 		</div>
 		</>

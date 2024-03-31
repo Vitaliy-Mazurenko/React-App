@@ -3,6 +3,7 @@ import Input from '../../common/Input/Input.jsx';
 import './createTask.css';
 // import type ITask from './../../types/initTask';
 import { Context } from './../../context/context';
+import dateGenerator from '../../helpers/dateGenerator';
 
 // interface ITask {
 // 	title: string;
@@ -27,15 +28,16 @@ const CreateTask: React.FC<ChildrenProps> = ({ showCreateTask, column }) => {
 
 	const handleCreate = (e: React.SyntheticEvent) => {
 		e.preventDefault();
+		let creationDate = dateGenerator(new Date());
 		if(title){
-			setTasks([...tasks, {
+			setTasks([{
 				title: column,
 				name: title,
 				description: description,
-				date: 'string',
+				date: creationDate,
 				status: 'string',
 				priority: 'Low',
-			}]);
+			}, ...tasks]);
 		}
 
 			showCreateTask(false);
@@ -58,6 +60,11 @@ const CreateTask: React.FC<ChildrenProps> = ({ showCreateTask, column }) => {
 					placeholder='Enter description'
 					onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
 				/>
+				<select name="selected">
+			        <option value="Low">Low</option>
+			        <option value="Medium">Medium</option>
+			        <option value="Hith">Hith</option>
+ 				</select>
 				<button type="button" className="buttonCreateTask" onClick={handleCreate}>
 					Create Task
 				</button>

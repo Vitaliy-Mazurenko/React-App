@@ -63,7 +63,7 @@ const List = ({
     	  />
 		)}
 		{listTasks.map((item: ITask, index: number) => (
-		  <div className='Board-list' key={index}>
+		  <div className='Task-list' key={index}>
 			<Task task={item} />
 		  </div>
 		))}	

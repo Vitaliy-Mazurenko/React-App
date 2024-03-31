@@ -21,3 +21,8 @@
   margin-left: 15px;
   cursor: pointer;
 }
+
+.Task-list {
+  max-width: 260px;
+}
+

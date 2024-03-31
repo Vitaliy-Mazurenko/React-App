@@ -23,7 +23,7 @@ interface ChildrenProps {
 	return (
 	  <div className='Board'>
 		{title.map((item: string, index: number) => (
-		  <div className='Board-list' key={index}>
+		  <div className='Board-wrap' key={index}>
 			<List list={item} />
 		  </div>
 		))}

@@ -2,7 +2,16 @@
   border: 1px solid gray;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   padding: 15px;
-  width: 275px;
-  margin: 15px;
+  margin: 15px 5px;
+}
+
+.Task-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Task-description {
+  color: gray;
 }
