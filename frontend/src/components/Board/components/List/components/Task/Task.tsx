@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './task.css';
 import threeDots from "../../../../../../assets/icons/three_dots_vertical.svg";
+import Calendar from "../../../../../../assets/icons/calendar.svg";
 // import Button from '../../../../../../common/Button/Button';
 import { Context } from '../../../../../../context/context';
 // import type IList from '../../../../types/initData';
@@ -11,7 +12,7 @@ interface ITask {
 	description?: string;
 	date: string;
 	status: string;
-	priority: 'Low' | 'Medium' | 'High'; 
+	priority: string;
 }
 
 interface childrenProps {
@@ -42,7 +43,10 @@ const Task = ({
 			</span>
 			</div>
 			<div className="Task-description">{task.description}</div>
-			<div className="Task-date">{task.date}</div>
+			<div className="Task-date">
+			<img className="Task-calendar" src={Calendar} alt="calendar" />
+				{task.date}</div>
+			<div className="Task-priority">{task.priority}</div>
 		
 		</div>
 		</>

@@ -14,4 +14,11 @@
 
 .Task-description {
   color: gray;
+  margin-bottom: 5px;
+}
+.Task-calendar{
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  margin-right: 5px;
 }

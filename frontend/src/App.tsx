@@ -60,13 +60,6 @@ function App() {
 					list={list}
 				/>
 			)}
-      {/* {showList && (
-				<CreateList
-        showCreate={showCreate}
-        addList={addList}
-      />
-					)}
-      	<Board list={list}/> */}
       </Context.Provider>
     </div>
   );

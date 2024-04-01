@@ -21,10 +21,42 @@
   line-height: 20px;
   align-items: center;
 }
+
+.form-task > select{
+  width: 95%;
+  padding: 5px 5px;
+  margin: 10px 5px 0 5px;
+  border: 2px solid #D3D2DA;
+}
+
+.form-task > select > option:first-child {
+  color: gray;
+}
+
+.form-task > select:focus-visible {
+  border: 2px dashed #D3D2DA;
+  outline: none;
+}
+
 .form-task > .myInput{
-width: 94%;
-padding: 0 0px;
-margin: 4px 5px 0 5px;
+  width: 94%;
+  padding: 0 0px;
+  margin: 4px 5px 0 5px;
+}
+
+.form-task > .myInput:focus-visible{
+  border: 2px dashed #D3D2DA;
+}
+
+.form-task textarea{
+  border: 2px solid #D3D2DA;
+  width: 92%;
+  margin-left: 5px;
+}
+
+.form-task textarea:focus-visible {
+  border: 2px dashed #D3D2DA;
+  outline: 0;
 }
 
 .buttonCreateTask {
@@ -42,4 +74,8 @@ margin: 4px 5px 0 5px;
 .buttonCreateTask:focus{
   box-shadow: 0 0 0 2px rgb(13 110 253 / 50%);
   border-radius: 2px;
+}
+
+.validate{
+  color: #e11;
 }
