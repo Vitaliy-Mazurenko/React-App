@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import './task.css';
 import threeDots from "../../../../../../assets/icons/three_dots_vertical.svg";
 import Calendar from "../../../../../../assets/icons/calendar.svg";
-// import Button from '../../../../../../common/Button/Button';
+import ModalWnd from '../../../../../../components/ModalWnd/ModalWnd';
 import { Context } from '../../../../../../context/context';
 // import type IList from '../../../../types/initData';
 
@@ -24,7 +24,7 @@ const Task = ({
   }: childrenProps) => {
 	const { tasks } = useContext(Context);
 
-	// const [showTask, setShowCreateTask] = useState(false);
+	const [modalState, setModalState] = useState(false);
 	// console.log(tasks);
 
 	// const showCreateTask = (hide: boolean) => {
@@ -32,13 +32,15 @@ const Task = ({
 	// };
 
 
+
+
 	return (
 		<>
+		<ModalWnd call={modalState} />
 		<div className='Task'>
 			<div className="Task-header">
 				<span>{ task.name }</span>
-			<span className="wrap-header">
-	
+			<span className="wrap-header" onClick={() => setModalState(true)}>	
 			<img src={threeDots} alt="dots" />
 			</span>
 			</div>
