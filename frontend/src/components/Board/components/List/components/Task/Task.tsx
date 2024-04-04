@@ -36,7 +36,7 @@ const Task = ({
 
 	return (
 		<>
-		<ModalWnd call={modalState} />
+		<ModalWnd call={modalState} onDestroy={()=> setModalState(false)} />
 		<div className='Task'>
 			<div className="Task-header">
 				<span>{ task.name }</span>
