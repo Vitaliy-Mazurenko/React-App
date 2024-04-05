@@ -22,3 +22,15 @@
   margin-top: 5px;
   margin-right: 5px;
 }
+
+.Task-priority span{
+  padding-right: 4px;
+  color: grey;
+}
+
+.Task-priority{
+  padding: 1px 7px;
+  background-color: lightgrey;
+  width: fit-content;
+  border-radius: 10px;
+}

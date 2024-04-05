@@ -5,11 +5,12 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .Modal-wrap {
-  max-width: 550px;
-  width: 100%;
+  max-width: 900px;
+  width: 85%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -35,9 +36,52 @@
 
 }
 
+.Modal-content{
+  display: flex;
+}
 
-.Modal-content {
+.Modal-edit-content {
+  width: 70%;
+  padding: 0 15px 20px;
+}
+.Modal-activity {
+  width: 30%;
+}
 
-  padding: 1rem;
+.Modal-header-content {
+  padding: 0px 15px 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.Edit-task {
+  width: 110px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #D3D2DA;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.Edit-task img {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+  margin-top: 7px;
+  margin-right: 8px;
+}
+
+.Modal-task-name {
+  padding: 0 0;
+}
+
+.Modal-task-description {
+  padding-top: 15px;
+  line-height: 30px;
+}
+
+.Modal-task-title img {
+  position: relative;
+  top: 6px; 
+  margin-right: 5px;
 }

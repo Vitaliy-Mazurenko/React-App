@@ -4,16 +4,16 @@ import threeDots from "../../../../../../assets/icons/three_dots_vertical.svg";
 import Calendar from "../../../../../../assets/icons/calendar.svg";
 import ModalWnd from '../../../../../../components/ModalWnd/ModalWnd';
 import { Context } from '../../../../../../context/context';
-// import type IList from '../../../../types/initData';
+import type ITask from '../../../../../../types/initTask';
 
-interface ITask {
-	title: string;
-	name: string;
-	description?: string;
-	date: string;
-	status: string;
-	priority: string;
-}
+// interface ITask {
+// 	title: string;
+// 	name: string;
+// 	description?: string;
+// 	date: string;
+// 	status: string;
+// 	priority: string;
+// }
 
 interface childrenProps {
 	task: ITask;
@@ -27,16 +27,10 @@ const Task = ({
 	const [modalState, setModalState] = useState(false);
 	// console.log(tasks);
 
-	// const showCreateTask = (hide: boolean) => {
-	// 	setShowCreateTask(hide);
-	// };
-
-
-
 
 	return (
 		<>
-		<ModalWnd call={modalState} onDestroy={()=> setModalState(false)} />
+		<ModalWnd call={modalState} onDestroy={()=> setModalState(false)} task={task} />
 		<div className='Task'>
 			<div className="Task-header">
 				<span>{ task.name }</span>
@@ -48,7 +42,9 @@ const Task = ({
 			<div className="Task-date">
 			<img className="Task-calendar" src={Calendar} alt="calendar" />
 				{task.date}</div>
-			<div className="Task-priority">{task.priority}</div>
+			<span className="Task-priority">
+			<span>&bull;</span>
+				{task.priority}</span>
 		
 		</div>
 		</>
